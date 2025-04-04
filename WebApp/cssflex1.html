@@ -1,0 +1,40 @@
+<!--
+  flex-direction
+  flex-wrap
+  flex-flow
+  justify-content
+  align-items
+  align-content
+-->
+<!-- 
+  row
+  column
+  row-reverse
+  column-reverse
+-->
+<style>
+    .flex-container
+    {
+        display: flex;
+        /* flex-direction: row; */
+        /* flex-direction: column; */
+        /* flex-direction: row-reverse;  */
+        flex-direction: column-reverse;
+        
+        background-color: aqua;
+    }
+    .flex-container>div
+    {
+        background-color:blue;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+    </style>
+    <div class="flex-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
