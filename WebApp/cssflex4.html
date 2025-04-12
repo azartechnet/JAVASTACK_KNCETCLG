@@ -1,0 +1,46 @@
+<!--
+  align-item:
+  center
+  flex-start
+  flex-end
+  stretch
+  baseline
+  normal
+-->
+  <!--
+   align-content:
+   center
+   stretch
+   flex-start
+   flex-end
+   space-between
+   space-around
+   space-evenly
+  -->
+<style>
+    .flex-container
+    {
+        display: flex;
+        height: 200px;
+        /* align-items: center; */
+        /* align-items: flex-start; */
+        /* align-items: end; */
+        /* align-items: baseline; */
+        /* align-items: stretch; */
+        background-color: aqua;
+    }
+    .flex-container>div
+    {
+        background-color: blue;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+    }
+</style>
+<div class="flex-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>

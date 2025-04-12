@@ -1,0 +1,49 @@
+<!-- 
+ flex-flow:row wrap
+ justify-content:center/flex-start/flex-end/flex-around/space-around/
+ space-between/space-evenly 
+-->
+<html>
+    <head>
+        <title></title>
+        <style>
+            .flex-container
+            {
+                display: flex;
+                /* flex-flow: row wrap; */
+                /* flex-flow:column wrap; */
+                /* flex-wrap: wrap-reverse; */
+                /* justify-content: center; */
+                /* justify-content: flex-start; */
+                /* justify-content: flex-end; */
+                /* justify-content: flex-around; */
+                 /* justify-content: space-around;  */
+                 justify-content: space-between;
+                background-color: aqua;
+            }
+            .flex-container>div
+            {
+                background-color: blue;
+                width: 100px;
+                margin: 10px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            
+        </div>
+    </body>
+ </html>
