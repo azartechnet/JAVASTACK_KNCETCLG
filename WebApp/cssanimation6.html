@@ -1,0 +1,38 @@
+<style>
+    h2
+    {
+        width: 400px;
+        background-color: orange;
+        animation-name: text;
+        animation-duration: 3s;
+    }
+    #f1
+    {
+        animation-fill-mode: none;
+    }
+    #f2
+    {
+        animation-fill-mode: forwards;
+    }
+    #f3
+    {
+        animation-fill-mode: backwards;
+    }
+    @keyframes text{
+        from
+        {
+            margin-left: 0%;
+            background-color: aqua;
+        }
+        to
+        {
+            margin-left:60%;
+            background-color: orange;
+        }
+    }
+</style>
+<body>
+    <h2 id="f1">Hello World!</h2>
+    <h2 id="f2">Heading</h2>
+    <h2 id="f3">Heading</h2>
+</body>
