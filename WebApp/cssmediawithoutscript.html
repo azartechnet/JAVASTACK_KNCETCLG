@@ -1,34 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive Website with Flexbox and Carousel">
+    <title>Responsive Web Design</title>
+    <link rel="stylesheet" href="mediacss1.css"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        .navbar .logo {
+            font-size: 24px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+        }
 
-<link rel="stylesheet" href="mediacss1.css"/>
-<style>
-    .flex-container
-    {
-        display: flex;
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 15px;
+            padding: 15px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
        
-    }
-    .flex-container>div
-    {
-       
-        margin: 10px;
-        padding:20px;
-        font-size: 30px;
-    }
+        .carousel img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            scroll-snap-align: center;
+        }
+
+        @media (min-width: 600px) {
+            .carousel img {
+                max-width: 700px;
+            }
+        }
+        @media (min-width: 768px) {
+            .carousel img {
+                max-width: 900px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .carousel img {
+                max-width: 100%;
+            }
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .flex-container img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+        }
     </style>
+</head>
 <body>
     <nav class="navbar">
         <div class="logo">MyWebSite</div>
         <ul class="nav-links">
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
     </nav>
-    <img src="images/c1.jpeg" alt="" width="100%" height="50%">
-    
-        <div class="flex-container">
-          <div><img src="images/b1.jpeg" alt=""></div>
-          <div><img src="images/b2.jpeg" alt=""></div>
-          <div><img src="images/b3.jpeg" alt=""></div>
-        </div>
+
+    <div class="carousel">
+        <img src="images/c1.jpeg" alt="Image 1">
+       
+    </div>
+
+    <div class="flex-container">
+        <div><img src="images/b1.jpeg" alt=""></div>
+        <div><img src="images/b2.jpeg" alt=""></div>
+        <div><img src="images/b3.jpeg" alt=""></div>
+    </div>
 </body>
+</html>
