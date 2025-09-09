@@ -1,0 +1,19 @@
+<script>
+let number=213;
+const originalnumber=number;
+let reversedNumber=0;
+while(number>0)
+{
+    const digit=number%10;
+    reversedNumber=reversedNumber*10+digit;
+    number=Math.floor(number/10);
+}
+if(originalnumber===reversedNumber)
+{
+    document.write("Its is Palindrome numbers")
+}
+else
+{
+    document.write("Its is Not Palindrom Numbers")
+}
+</script>
