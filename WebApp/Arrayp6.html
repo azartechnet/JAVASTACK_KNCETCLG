@@ -15,3 +15,43 @@
     console.log(newArr)
 </script>
 
+<script>
+    //flatMap
+    var arr3=[10,20,30,40,50]
+    var newArr=arr3.flatMap(function(item,index){
+        return [item,item*2]
+    })
+    console.log("flatMap"+newArr)
+</script>
+
+<script>
+    //filter
+    var arr=[10,20,30,40,50]
+    var newArr=arr.filter(function(item,index){
+        return item>30;
+    })
+    console.log(newArr)
+</script>
+
+<script>
+    //reduce
+    // var arr=[10,20,30,40,50]
+    // var sum=arr.reduce(function(sum,item){
+    //     return sum+item
+    // })
+    // console.log(sum)
+
+
+//keys
+var obj={
+    "name":"azar",
+    "age":30,
+    "city":"newyork"
+}
+var newArr=Object.keys(obj);
+console.log("keys"+newArr)
+
+var newArr1=Object.entries(obj)
+console.log(newArr1)
+
+</script>
