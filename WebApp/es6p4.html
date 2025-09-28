@@ -1,0 +1,17 @@
+<p id="d1"></p>
+<script>
+    const q1=["a1","a2","a3","a4"]
+    const q2=["b1","b2","b3","b4"]
+    const q3=["c1","c2","c3","c4"]
+
+    const r=[...q1,...q2,...q3]
+    document.getElementById("d1").innerHTML=r;
+</script>
+
+<p id="d2"></p>
+<script>
+    const number=[10,20,30,40]
+    let maxvalue=Math.max(...number)
+    let minvalue=Math.min(...number)
+    document.getElementById("d2").innerHTML=`Max value is:: ${maxvalue} min value is:: ${minvalue}`
+</script>
