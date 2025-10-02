@@ -1,0 +1,19 @@
+<p id="d1"></p>
+<script>
+    function myApp(s)
+    {
+        document.getElementById("d1").innerHTML=s;
+        myApp2();
+    }
+    function myApp1()
+    {
+        myApp("Hello");
+    }
+    function myApp2()
+    {
+        myApp("End")
+    }
+   
+    // myApp2()
+    myApp1()
+</script>
