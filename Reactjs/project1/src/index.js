@@ -53,7 +53,7 @@ r1.render(<Sample/>)*/
 
 //LoginForm
 
-const Login=()=>{
+/*const Login=()=>{
   return(
     <>
     <form>
@@ -69,4 +69,85 @@ const Login=()=>{
 }
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Login/>)
+r1.render(<Login/>)*/
+
+//React List
+
+/*const MyElem=()=>{
+  return(
+    <div>
+      <h1>MyList</h1>
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+      </ul>
+      <ol>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+      </ol>
+    </div>
+  )
+}
+
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyElem/>)*/
+
+//Conditional Rendering
+
+/*const x=20;
+let text="";
+if(x>10)
+{
+  text="x is greater than 10"
+}
+else
+{
+  text="x is less than 10"
+}
+const MyElem=()=>{
+  return(
+    <div>
+      <h1>{text}</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyElem/>)*/
+
+/*const x=10;
+let text="";
+if(x>10)
+{
+  text="x is greater than 10"
+}
+else if(x==10)
+{
+  text="Equal to 10"
+}
+else
+{
+  text="x is less than 10"
+}
+const MyElem=()=>{
+  return(
+    <div>
+      <h1>{text}</h1>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<MyElem/>)*/
+
+import './index.css';
+const App=()=>{
+  return(
+    <>
+      <h1>Welcome</h1>
+      <p className="f1">This is paragraph..</p>
+    </>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<App/>)
