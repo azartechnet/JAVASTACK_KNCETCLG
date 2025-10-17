@@ -140,7 +140,7 @@ const MyElem=()=>{
 const r1=ReactDOM.createRoot(document.getElementById('root'))
 r1.render(<MyElem/>)*/
 
-import './index.css';
+/*import './index.css';
 const App=()=>{
   return(
     <>
@@ -150,4 +150,76 @@ const App=()=>{
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<App/>)
+r1.render(<App/>)*/
+
+//Function Component
+
+/*function Sample()
+{
+  return(
+    <div>
+      <form>
+        <label>Enter the UserName</label>
+        <input type="text" name=""/>
+        <input type="submit" value="Login"/>
+      </form>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Sample/>)*/
+
+//class component
+
+/*class Sample extends React.Component
+{
+  render()
+  {
+    return(
+       <div>
+        <h1>Hello</h1>
+        <p>Welcome</p>
+       </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)*/
+
+//React component in component
+
+/*function Component1()
+{
+  return(
+    <>
+     <div>Component1</div>
+    <Component2/>
+    </>
+   
+  )
+}
+function Component2()
+{
+  return(
+    <>
+    <div>Component2</div>
+    </>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Component1/>)*/
+
+//props argument passing
+
+function Sample(props)
+{
+  return(
+    <div>
+      <h1>Hello{props.name}{props.age}</h1>
+      <p>Welcome</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample name="Rahul" age="89"/>)
+
