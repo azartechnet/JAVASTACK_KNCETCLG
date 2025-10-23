@@ -211,7 +211,7 @@ r1.render(<Component1/>)*/
 
 //props argument passing
 
-function Sample(props)
+/*function Sample(props)
 {
   return(
     <div>
@@ -221,5 +221,57 @@ function Sample(props)
   )
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Sample name="Rahul" age="89"/>)
+r1.render(<Sample name="Rahul" age="89"/>)*/
+
+//Function Component-1
+/*function Greeting()
+{
+  const name="azar";
+  return(
+    <div style={{textAlign:'center',backgroundColor:'green'}}>
+      <h1>Hello,{name}</h1>
+      <p>Welcome to React</p>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Greeting/>)*/
+
+//OnClick
+
+/*function SimpleButton()
+{
+  function showMessage()
+  {
+    alert("Button was clicked")
+  }
+  return(
+    <div style={{textAlign:'center'}}>
+       <button onClick={showMessage}>ClickHere</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<SimpleButton/>)*/
+
+//Constructor using super
+
+class Sample extends React.Component
+{
+   constructor()
+   {
+    super();
+    this.state={name:"azar",age:25};
+   }
+   render()
+   {
+    return(
+      <div>
+        <h1>Hello{this.state.name}{this.state.age}</h1>
+      </div>
+    )
+   }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Sample/>)
 
