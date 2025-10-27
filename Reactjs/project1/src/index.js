@@ -329,7 +329,7 @@ r1.render(<ToggleMessage/>)*/
 
 //Changing the State object
 
-class Sample extends React.Component
+/*class Sample extends React.Component
 {
   constructor(props)
   {
@@ -352,4 +352,104 @@ class Sample extends React.Component
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Sample/>)
+r1.render(<Sample/>)*/
+
+//React Event
+
+/*function Football()
+{
+  const shoot=()=>{
+    alert("Goal")
+  }
+  return(
+    <>
+    <button onClick={shoot}>Shoot</button>
+    </>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+//React Arguments passing
+
+/*function Football()
+{
+  const shoot=(year)=>{
+    alert(`Goal in ${year}`)
+  }
+  return(
+    <>
+      <button onClick={()=>shoot(2002)}>Shoot</button>
+    </>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Football/>)*/
+
+/*function MissedGoal()
+{
+  return<h1>Missed</h1>
+}
+function MadeGoal()
+{
+  return<h1>MadeFoal</h1>
+}
+function Football(props)
+{
+  const isGoal=props.isGoal;
+  if(isGoal)
+  {
+    return<MadeGoal/>
+  }
+  else
+  {
+    return<MissedGoal/>
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+// r1.render(<Football isGoal={true}/>)
+r1.render(<Football isGoal={Math.random()>0.5}/>)*/
+
+//React List Using Map
+
+/*function Car(props)
+{
+  return<li>I am {props.b1}</li>
+}
+function Garage()
+{
+  const cars=["BMW","Audi","Toyota"]
+  return(
+    <div>
+      <h1>Garage</h1>
+      <ul>
+        {cars.map((car)=><Car b1={car}/>)}
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Garage/>)*/
+
+//React using Key
+
+function Car(props)
+{
+  return<li>{props.id}{props.name}</li>
+}
+function Garage()
+{
+  const cars=[
+    {id:1,name:"azar"},
+    {id:2,name:"mohamed"}
+  ]
+  return(
+    <div>
+      <ul>
+             {cars.map((car)=><Car id={car.id} name={car.name}/>)}
+      </ul>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Garage/>)
