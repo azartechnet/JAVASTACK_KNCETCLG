@@ -501,7 +501,7 @@ r1.render(<Profile/>)*/
 
 //Destructuring in Arrays
 
-function Skills()
+/*function Skills()
 {
   const skills=["java","python","c++"]
   const [first,second,third]=skills;
@@ -519,4 +519,90 @@ function Skills()
 export default Skills;
 
 const r1=ReactDOM.createRoot(document.getElementById('root'))
-r1.render(<Skills/>)
+r1.render(<Skills/>)*/
+
+//React getDerivedStateFromProps
+
+/*class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={count:0}
+  }
+  static getDerivedStateFromProps(props,state)
+  {
+      console.log("GetDerivedFromProps")
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Header</h1>
+        <p>Count:{this.state.count}</p>
+        <button onClick={()=>this.setState({count:this.state.count+1})}>increment</button>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Header/>)*/
+
+//ComponentDidMount
+
+/*class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={favcolor:"red"}
+  }
+  componentDidMount()
+  {
+    console.log("ComponentDidMount")
+    setTimeout(()=>{
+      this.setState({favcolor:"blue"})
+    },3000)
+  }
+  render()
+  {
+    return(
+      <div>
+        <h1>Header</h1>
+        <p>My Favour color is::{this.state.favcolor}</p>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Header/>)*/
+
+//ShouldComponentUpdate
+
+class Header extends React.Component
+{
+  constructor(props)
+  {
+    super(props);
+    this.state={favcolor:"red"}
+  }
+  shouldComponentUpdate(nextProps,nextState)
+  {
+    console.log("shouldComponentUpdate")
+    return true;
+  }
+  changeColor=()=>{
+    this.setState({favcolor:"blue"})
+  }
+  render()
+  {
+    return(
+      <div>
+        <p>{this.state.favcolor}</p>
+        <button onClick={this.changeColor}>ChangeColor</button>
+      </div>
+    )
+  }
+}
+const r1=ReactDOM.createRoot(document.getElementById("root"))
+r1.render(<Header/>)
