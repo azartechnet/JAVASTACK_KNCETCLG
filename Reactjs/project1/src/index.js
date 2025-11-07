@@ -579,7 +579,7 @@ r1.render(<Header/>)*/
 
 //ShouldComponentUpdate
 
-class Header extends React.Component
+/*class Header extends React.Component
 {
   constructor(props)
   {
@@ -605,4 +605,61 @@ class Header extends React.Component
   }
 }
 const r1=ReactDOM.createRoot(document.getElementById("root"))
-r1.render(<Header/>)
+r1.render(<Header/>)*/
+
+//React Hooks useState
+
+import { useState,useEffect } from "react";
+/*function Counter()
+{
+  const [count,setCount]=useState(0)
+  const [name,setName]=useState("mohamed")
+  return(
+    <div>
+      <p>Count:{count}</p>
+      <button onClick={()=>setCount(count+1)}>increment</button>
+      <p>MyName is {name}</p>
+      <button onClick={()=>setName("Raja")}>ChangeName</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<Counter/>)*/
+
+//React useEffect
+
+/*function ClickCounter()
+{
+  const [count,setCount]=useState(0)
+  useEffect(()=>{
+    console.log("Component rendered or updated...")
+  })
+  return(
+    <div>
+      <p>Count::{count}</p>
+      <button onClick={()=>setCount(count+1)}>Increase</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<ClickCounter/>)*/
+
+//Another Example in useState()
+
+function UserProfile()
+{
+  const [user,setUser]=useState({name:"mohamed",age:36,email:"mohamed@gmail.com"})
+  const updateEmail=()=>{
+    setUser({...user,email:"mohamed123@gmail.com"})
+  }
+  return(
+    <div>
+      <p>UserName:{user.name}</p>
+      <p>Age:{user.age}</p>
+      <p>Email:{user.email}</p>
+      <button onClick={updateEmail}>UpdatedEmail!!!</button>
+    </div>
+  )
+}
+const r1=ReactDOM.createRoot(document.getElementById('root'))
+r1.render(<UserProfile/>)
