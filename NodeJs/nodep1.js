@@ -1,9 +1,6 @@
-var h1 = require('http');
-
-h1.createServer(function(req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/html' }); // <-- Content-Type is 'text/plain'
-    res.write('<h1>Welcome</h1>'); // <-- But you're sending HTML content
-    res.end(); // <-- Missing in your original code
-}).listen(3031);
-
-console.log("Server is Running...");
+const h1=require('http')
+const s1=h1.createServer((req,res)=>{
+    res.writeHead(200,{'Content-Type':'text/plain'})
+    res.end('welcome to the Application')
+}).listen(8081)
+console.log("Server is Running...")
