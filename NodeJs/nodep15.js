@@ -1,0 +1,5 @@
+var fs=require('fs')
+var rs=fs.createReadStream("sample.txt")
+var ws=fs.createWriteStream("f1.txt")
+rs.pipe(ws)
+console.log("End...Program")
